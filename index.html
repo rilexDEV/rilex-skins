@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RILEX SKINS — your skin, offline, everywhere</title>
+<meta name="description" content="RILEX SKINS: a Horizon mod that gives offline players their own skin, seen by everyone with the mod.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0d12; --panel:#141821; --line:#232a37; --text:#e8ecf3; --muted:#9aa4b5;
+  --a:#7c5cff; --b:#00d4a6; --c:#ffb547; --red:#ff5d6c;
+}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--text);font:16px/1.6 "Space Grotesk",system-ui,sans-serif}
+[dir=rtl] body,[dir=rtl] .ar{font-family:"Cairo",system-ui,sans-serif}
+a{color:var(--b)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font-weight:700;letter-spacing:.12em}
+.logo b{background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;color:transparent}
+.lang{background:none;border:1px solid var(--line);color:var(--text);padding:6px 14px;border-radius:999px;cursor:pointer;font:inherit}
+.hero{padding:70px 0 50px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+h1{font-size:clamp(40px,7vw,76px);line-height:1;font-weight:700;letter-spacing:-.02em}
+h1 span{background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:19px;margin:20px 0 30px;max-width:520px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:12px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:700}
+.btn.main{background:linear-gradient(90deg,var(--a),#5b8cff);color:#fff}
+.btn.ghost{background:var(--panel);color:var(--text);border:1px solid var(--line)}
+.ver{color:var(--muted);font-size:13px;margin-top:12px}
+.cube{aspect-ratio:1;border-radius:24px;background:
+  radial-gradient(circle at 30% 30%,#7c5cff55,transparent 60%),radial-gradient(circle at 70% 70%,#00d4a655,transparent 60%),var(--panel);
+  border:1px solid var(--line);display:grid;place-items:center}
+.cube svg{width:58%}
+section{padding:46px 0;border-top:1px solid var(--line)}
+h2{display:inline-block;font-size:30px;font-weight:700;margin-bottom:22px;padding:6px 18px;border-radius:10px;color:#0b0d12}
+.h-a{background:var(--a);color:#fff}.h-b{background:var(--b)}.h-c{background:var(--c)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card h3{font-size:18px;margin-bottom:6px}
+.card p{color:var(--muted);font-size:15px}
+.n{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-weight:700;margin-bottom:12px;background:#7c5cff22;color:var(--a)}
+.copy{display:flex;gap:8px;margin-top:12px}
+.copy code{flex:1;background:#0b0d12;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13px;overflow:auto;white-space:nowrap}
+.copy button{background:var(--b);color:#0b0d12;border:0;border-radius:10px;padding:0 14px;font-weight:700;cursor:pointer}
+table{width:100%;border-collapse:collapse;background:var(--panel);border-radius:16px;overflow:hidden}
+td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+tr:first-child td{border-top:0}
+td:first-child{white-space:nowrap;color:var(--b);font-family:ui-monospace,monospace;font-size:14px}
+.warn{border-color:#ff5d6c55;background:#ff5d6c10}
+.warn h3{color:var(--red)}
+footer{padding:30px 0 50px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+.ar{display:none}[dir=rtl] .ar{display:revert}[dir=rtl] .en{display:none}
+@media (max-width:780px){.hero{grid-template-columns:1fr}.cube{max-width:260px}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <div class="logo"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true" style="vertical-align:middle;margin-inline-end:10px"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#00d4a6"/></linearGradient></defs><rect x="2" y="2" width="30" height="30" rx="8" fill="url(#g)"/><path d="M11 25V9h7a5 5 0 0 1 0 10h-7m7 0 5 6" fill="none" stroke="#0b0d12" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg><b>RILEX</b> MODS <span style="color:var(--muted);font-weight:500;letter-spacing:.04em">/ SKINS</span></div>
+  <button class="lang" onclick="toggleLang()"><span class="en">العربية</span><span class="ar">English</span></button>
+</nav>
+
+<div class="hero">
+  <div>
+    <h1 class="en">Your skin.<br><span>Offline. Everywhere.</span></h1>
+    <h1 class="ar">سكنك.<br><span>بلا حساب. بكل مكان.</span></h1>
+    <p class="lead en">A Horizon mod that gives every offline player their own skin — protected by a key only you hold, seen by everyone who plays with RILEX SKINS.</p>
+    <p class="lead ar">mod لـ Horizon بيعطي كل لاعب offline سكن خاص فيه، محمي بمفتاح إلك وحدك، وبيشوفه كل حدا عنده RILEX SKINS.</p>
+    <div class="btns">
+      <a class="btn main" id="dl" href="https://github.com/rilexDEV/rilex-skins/releases/latest"><span class="en">Download the mod</span><span class="ar">نزّل الـ mod</span></a>
+      <a class="btn ghost" href="https://github.com/rilexDEV/rilex-skins">GitHub</a>
+    </div>
+    <p class="ver" id="ver"></p>
+  </div>
+  <div class="cube" aria-hidden="true">
+    <svg viewBox="0 0 8 8" shape-rendering="crispEdges">
+      <rect width="8" height="8" fill="#5a3d2b"/><rect y="2" width="8" height="6" fill="#c8946a"/>
+      <rect x="1" y="4" width="2" height="1" fill="#fff"/><rect x="5" y="4" width="2" height="1" fill="#fff"/>
+      <rect x="2" y="4" width="1" height="1" fill="#7c5cff"/><rect x="5" y="4" width="1" height="1" fill="#7c5cff"/>
+      <rect x="3" y="6" width="2" height="1" fill="#8a5a3c"/><rect y="0" width="8" height="1" fill="#00d4a6"/>
+    </svg>
+  </div>
+</div>
+
+<section>
+  <h2 class="h-a"><span class="en">Install in 3 steps</span><span class="ar">التثبيت بـ 3 خطوات</span></h2>
+  <div class="grid">
+    <div class="card"><div class="n">1</div>
+      <h3 class="en">Add from GitHub</h3><h3 class="ar">زيدو من GitHub</h3>
+      <p class="en">In the Horizon launcher: <b>Mods → Add from GitHub</b>, paste:</p>
+      <p class="ar">بالـ launcher: <b>Mods ← Add from GitHub</b>، والصق:</p>
+      <div class="copy"><code id="gh">https://github.com/rilexDEV/rilex-skins</code><button onclick="copyIt('gh',this)">Copy</button></div>
+    </div>
+    <div class="card"><div class="n">2</div>
+      <h3 class="en">Build once</h3><h3 class="ar">ابنِ مرة وحدة</h3>
+      <p class="en">Press <b>Build</b> on the native build row. The first build takes 20–30 minutes; later ones are quick.</p>
+      <p class="ar">اكبس <b>Build</b>. أول build بياخد 20 لـ 30 دقيقة، بعدين بيصير سريع.</p>
+    </div>
+    <div class="card"><div class="n">3</div>
+      <h3 class="en">Claim your name</h3><h3 class="ar">احجز اسمك</h3>
+      <p class="en">In game, type the commands below. Write down your recovery code.</p>
+      <p class="ar">باللعبة اكتب الأوامر تحت، واكتب الـ recovery code على ورقة.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="h-b"><span class="en">Commands</span><span class="ar">الأوامر</span></h2>
+  <table>
+    <tr><td>/rilexskin register NAME</td><td><span class="en">Claim your name (once). Shows your recovery code.</span><span class="ar">احجز اسمك (مرة وحدة). بيطلعلك الـ recovery code.</span></td></tr>
+    <tr><td>/rilexskin set PATH slim</td><td><span class="en">Upload a 64×64 PNG skin (classic or slim arms).</span><span class="ar">ارفع سكن PNG قياس 64×64 (classic أو slim).</span></td></tr>
+    <tr><td>/rilexskin backup</td><td><span class="en">Save your key to a file. Keep it on a USB stick or phone.</span><span class="ar">احفظ مفتاحك بملف، وخلّيه على فلاشة أو تلفون.</span></td></tr>
+    <tr><td>/rilexskin restore FILE</td><td><span class="en">Use your name on a new computer.</span><span class="ar">استعمل اسمك على كمبيوتر جديد.</span></td></tr>
+    <tr><td>/rilexskin recover NAME CODE</td><td><span class="en">Lost your key? Your recovery code + admin approval brings it back.</span><span class="ar">ضيّعت المفتاح؟ الـ recovery code مع موافقة الـ admin بيرجّعلك اسمك.</span></td></tr>
+    <tr><td>/rilexskin status</td><td><span class="en">What this computer holds.</span><span class="ar">شو موجود على هالكمبيوتر.</span></td></tr>
+  </table>
+</section>
+
+<section>
+  <h2 class="h-c"><span class="en">Why it's safe</span><span class="ar">ليش آمن</span></h2>
+  <div class="grid">
+    <div class="card"><h3 class="en">Your key, your name</h3><h3 class="ar">مفتاحك = اسمك</h3>
+      <p class="en">Every change is signed with an Ed25519 key that never leaves your computer. Nobody can take your name or change your skin.</p>
+      <p class="ar">كل تغيير موقّع بمفتاح Ed25519 ما بيطلع من جهازك. ما حدا بيقدر ياخد اسمك أو يغيّر سكنك.</p></div>
+    <div class="card"><h3 class="en">Checked on the server</h3><h3 class="ar">تحقّق بالسيرفر</h3>
+      <p class="en">SHA-256, size and format checks, timestamps against replays, and rate limits on every request.</p>
+      <p class="ar">SHA-256، فحص الحجم والصيغة، وقت لكل طلب ضد التكرار، وحدّ لعدد الطلبات.</p></div>
+    <div class="card warn"><h3 class="en">Never share your key</h3><h3 class="ar">لا تعطي مفتاحك لحدا</h3>
+      <p class="en">Support will never ask for your key file. Only the recovery code is used, and only in the recover command.</p>
+      <p class="ar">الـ support ما رح يطلب ملف المفتاح أبداً. بس الـ recovery code، وبس بأمر الـ recover.</p></div>
+  </div>
+</section>
+
+<footer>
+  <span class="en">© 2026 RILEX MODS — RILEX SKINS by rilexDEV · for <a href="https://github.com/rilexDEV/horizon-custom">horizon-custom</a> · MIT. Not affiliated with Mojang, Microsoft or the Horizon authors. Native mods run with full access to your computer: read the source.</span>
+  <span class="ar">© 2026 RILEX MODS — RILEX SKINS من rilexDEV · لـ <a href="https://github.com/rilexDEV/horizon-custom">horizon-custom</a> · MIT. مش تابع لـ Mojang أو Microsoft أو فريق Horizon. الـ native mods بتشتغل بصلاحيات كاملة على جهازك: اقرا الكود.</span>
+</footer>
+</div>
+<script>
+function toggleLang(){const r=document.documentElement;const ar=r.dir!=="rtl";r.dir=ar?"rtl":"ltr";r.lang=ar?"ar":"en";try{localStorage.setItem("lang",r.lang)}catch(e){}}
+try{if(localStorage.getItem("lang")==="ar")toggleLang()}catch(e){}
+function copyIt(id,b){navigator.clipboard.writeText(document.getElementById(id).textContent).then(()=>{b.textContent="✓";setTimeout(()=>b.textContent="Copy",1500)})}
+// Latest release: point the button straight at the zip and show its version.
+fetch("https://api.github.com/repos/rilexDEV/rilex-skins/releases/latest").then(r=>r.ok?r.json():null).then(j=>{
+  if(!j)return;const a=(j.assets||[]).find(x=>/\.zip$/.test(x.name));
+  if(a)document.getElementById("dl").href=a.browser_download_url;
+  document.getElementById("ver").textContent="Latest: "+j.tag_name;
+}).catch(()=>{});
+</script>
+</body>
+</html>

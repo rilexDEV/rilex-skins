@@ -1,0 +1,7 @@
+node_modules/
+.wrangler/
+target/
+.dev.vars
+*.rilexkey
+identity*.pk8
+recovery-code.txt
