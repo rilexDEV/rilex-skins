@@ -1,0 +1,17 @@
+name = "rilex-skins"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+# Create it once:  npx wrangler kv namespace create SKINS
+# then paste the id it prints here.
+[[kv_namespaces]]
+binding = "SKINS"
+id = "PASTE_YOUR_KV_ID_HERE"
+
+[vars]
+AUTO_APPROVE = "false"
+
+# Secrets (never in this file):
+#   npx wrangler secret put MINESKIN_KEY
+#   npx wrangler secret put ADMIN_TOKEN
+#   npx wrangler secret put PEPPER

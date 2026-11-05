@@ -1,0 +1,6 @@
+{
+  "game": "26.3",
+  "hooks": 1,
+  "horizon_repository": "https://github.com/rilexDEV/horizon-custom",
+  "horizon_revision": "PUT_YOUR_HORIZON_CUSTOM_COMMIT_HERE"
+}

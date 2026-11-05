@@ -1,0 +1,44 @@
+# RILEX SKINS — offline skins for Horizon (rilexDEV/horizon-custom).
+# Phase 1: identity, recovery and upload. Phase 2 (next) draws other players' skins.
+[mod]
+id = "rilex_skins"
+version = "0.1.0"
+priority = 100
+
+[compatibility]
+# Your fork's commit:  git -C <horizon-custom> rev-parse HEAD
+horizon_revision = "PUT_YOUR_HORIZON_CUSTOM_COMMIT_HERE"
+
+# Everything heavy is in the crate; the helpers below are glue.
+[[crate]]
+id = "engine"
+path = "engine"
+
+[[injection]]
+id = "command"
+kind = "HEAD"
+target = "horizon_client::game::native_hooks::Game<'_>::native_command"
+helper = "command.rs"
+bindings = [
+  { name = "game", ty = "&mut crate::game::Game<'_>", value = "&mut *self" },
+  { name = "command", ty = "&str", value = "command" },
+  { name = "ran", ty = "&mut bool", value = "&mut *ran" },
+]
+
+[[injection]]
+id = "tick"
+kind = "HEAD"
+target = "horizon_client::game::native_hooks::Game<'_>::native_tick"
+helper = "tick.rs"
+bindings = [
+  { name = "game", ty = "&mut crate::game::Game<'_>", value = "&mut *self" },
+]
+
+[[injection]]
+id = "list"
+kind = "HEAD"
+target = "horizon_client::game::native_hooks::Game<'_>::native_mods"
+helper = "list.rs"
+bindings = [
+  { name = "mods", ty = "&mut Vec<crate::game::native_hooks::NativeMod>", value = "&mut *mods" },
+]
