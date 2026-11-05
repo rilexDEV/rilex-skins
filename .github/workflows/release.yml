@@ -1,0 +1,25 @@
+# Push a tag like v0.1.0 → tests run → a release with rilex-skins-v0.1.0.zip is published.
+name: release
+on:
+  push:
+    tags: ["v*"]
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Worker tests
+        run: cd worker && npm test
+      - name: Engine tests
+        run: cd mod/rilex_skins/mixins/rilex_skins/engine && cargo test
+      - name: Package the mod
+        run: |
+          cd mod
+          zip -r "../rilex-skins-${GITHUB_REF_NAME}.zip" rilex_skins
+      - name: Publish
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: gh release create "$GITHUB_REF_NAME" "rilex-skins-${GITHUB_REF_NAME}.zip" --title "RILEX SKINS $GITHUB_REF_NAME" --generate-notes
